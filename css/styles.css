@@ -2,20 +2,30 @@
 .title-section {
     display: flexbox;
     text-align: center;
-    max-width: 1000px;
-    background-color: aliceblue;
+    max-width: 500px;
+    max-height: 500px;
     margin: 50px auto;
 }
 
 .title-animation {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Sixtyfour Convergence", sans-serif;
+    font-size: 50px;
     animation-direction: normal;
-    
+    animation: fadeInOut 2s ease-in-out
 
 }
 
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
 /* BODY SECTION */
-.car-body {
+article {
     max-width: 1000px;
     margin: 50px auto;
     background-color: aliceblue;
@@ -23,6 +33,33 @@
 }
 
 body {
-    background-color: rgb(88, 148, 148);
+    width: 100%;
+    background-image: url(https://media.rawg.io/media/games/b73/b73d1d899db3b0fc118a95c8debfbbff.jpg);
+    background-size: cover;
 }
 
+/* BODY SECTION */
+#car-1 {
+    animation: movingBackandForthCar1 5s infinite alternate ease-in-out;
+}
+
+@keyframes movingBackandForthCar1 {
+    0% {transform: translateX(0);}
+    25% {transform: translateX(1000px);}
+    37.5%{transform: scaleX(-1);}
+    50% {transform: translateX(-1000px);}
+    75% {transform: translateX(-50px);}
+    100% {transform: translateX(0px);}
+}
+
+#car-2 {
+    animation: movingBackandForthCar2 4s infinite alternate ease-in-out;
+}
+
+@keyframes movingBackandForthCar2 {
+    0% {transform: translateX(0);}
+    10% {transform: rotate(360deg);}
+    37.5% {transform: translateX(2000px);}
+    50% {transform: scaleX(-1);}
+    75% {transform: translateX(-2000px);}
+}
