@@ -11,10 +11,10 @@
     font-family: "Sixtyfour Convergence", sans-serif;
     font-size: 50px;
     animation-direction: normal;
-    animation: fadingText 2s ease-in-out
+    animation: introTextAnimation 2s ease-in-out
 }
 
-@keyframes fadingText {
+@keyframes introTextAnimation {
     0% {
         opacity: 0;
         transform: translateY(30px);
@@ -28,14 +28,13 @@
 /* ------------------- BODY SECTION ------------------- */
 
 audio {
-    position: fixed;
+    position: absolute;
     top: 100px;
     left: 0;
 }
 article {
     max-width: 1000px;
     margin: 50px auto;
-    background-color: aliceblue;
 }
 
 body {
@@ -46,6 +45,7 @@ body {
 
 h3, h4 {
     text-align: center;
+    background-color: aliceblue;
 }
 
 .other-car {
@@ -76,7 +76,7 @@ h3, h4 {
 #other-car1-1 {
     position: absolute;
     top: 200px;
-    left: 2500px;
+    left: 2000px;
     animation: carAnimation1-1 5s infinite alternate ease-in-out;
 }
 
@@ -176,7 +176,7 @@ h3, h4 {
 #other-car3-1 {
     position: absolute;
     top: 1200px;
-    left: 200px;
+    left: -100px;
     animation: carAnimation3-1 5s infinite alternate ease-in-out;
 }
 
@@ -193,7 +193,7 @@ h3, h4 {
 #other-car3-2 {
     position: absolute;
     top: 1300px;
-    left: 2200px;
+    left: 1700px;
     animation: carAnimation3-2 5s infinite alternate ease-in-out;
 }
 
@@ -225,7 +225,7 @@ h3, h4 {
 #other-car4-1 {
     position: absolute;
     top: 1800px;
-    left: 200px;
+    left: 50px;
     animation: carAnimation4-1 2s infinite alternate ease-in-out;
 }
 
@@ -242,7 +242,7 @@ h3, h4 {
 #other-car4-2 {
     position: absolute;
     top: 1800px;
-    left: 2200px;
+    left: 1700px;
     animation: carAnimation4-2 2s infinite alternate ease-in-out;
 }
 
@@ -291,7 +291,7 @@ h3, h4 {
 #other-car5-2 {
     position: absolute;
     top: 2400px;
-    left: 2350px;
+    left: 2000px;
     animation: carAnimation5-2 5s infinite alternate ease-in-out;
 }
 
