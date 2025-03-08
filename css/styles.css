@@ -1,4 +1,4 @@
-/* INTRO SECTION */
+/* ------------------- INTRO SECTION ------------------- */
 .title-section {
     display: flexbox;
     text-align: center;
@@ -11,25 +11,31 @@
     font-family: "Sixtyfour Convergence", sans-serif;
     font-size: 50px;
     animation-direction: normal;
-    animation: fadeInOut 2s ease-in-out
-
+    animation: fadingText 2s ease-in-out
 }
 
-@keyframes fadeInOut {
+@keyframes fadingText {
     0% {
         opacity: 0;
+        transform: translateY(30px);
     }
     100% {
         opacity: 100%;
+        transform: translateY(0);
     }
 }
 
-/* BODY SECTION */
+/* ------------------- BODY SECTION ------------------- */
+
+audio {
+    position: fixed;
+    top: 100px;
+    left: 0;
+}
 article {
     max-width: 1000px;
     margin: 50px auto;
     background-color: aliceblue;
-    
 }
 
 body {
@@ -38,12 +44,27 @@ body {
     background-size: cover;
 }
 
-/* BODY SECTION */
-#car-1 {
-    animation: movingBackandForthCar1 5s infinite alternate ease-in-out;
+h3, h4 {
+    text-align: center;
 }
 
-@keyframes movingBackandForthCar1 {
+.other-car {
+    display: inline-block;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* ------------------- CARS SECTION ------------------- */
+
+/* ---- Car 1 section ---- */
+
+#car-1 {
+    animation: carAnimation1 5s infinite alternate ease-in-out;
+}
+
+@keyframes carAnimation1 {
     0% {transform: translateX(0);}
     25% {transform: translateX(1000px);}
     37.5%{transform: scaleX(-1);}
@@ -52,14 +73,234 @@ body {
     100% {transform: translateX(0px);}
 }
 
-#car-2 {
-    animation: movingBackandForthCar2 4s infinite alternate ease-in-out;
+#other-car1-1 {
+    position: absolute;
+    top: 200px;
+    left: 2500px;
+    animation: carAnimation1-1 5s infinite alternate ease-in-out;
 }
 
-@keyframes movingBackandForthCar2 {
+@keyframes carAnimation1-1 {
     0% {transform: translateX(0);}
-    10% {transform: rotate(360deg);}
-    37.5% {transform: translateX(2000px);}
+    25% {transform: translateX(-1000px);}
+    50% {transform: scaleX(-1);}
+    75% {transform: scaleX(1);}
+    80% {transform: rotate(360deg);}
+}
+
+#other-car1-2 {
+    position: absolute;
+    top: 200px;
+    left: 50px;
+    animation: carAnimation1-2 5s infinite alternate ease-in-out;
+}
+
+@keyframes carAnimation1-2 {
+    0% {transform: translateX(0);}
+    10% {transform: rotateZ(-30deg);}
+    20% {transform: rotateZ(30deg);}
+    30% {transform: rotateZ(-30deg);}
+    40% {transform: rotateZ(30deg);}
+    50% {transform: rotateZ(-30deg);}
+    60% {transform: rotateZ(30deg);}
+    70% {transform: rotateZ(-30deg);}
+    80% {transform: rotateZ(30deg);}
+    90% {transform: rotateZ(-30deg);}
+    100% {transform: translateX(0);}
+}
+
+
+/* ---- Car 2 section ---- */
+
+#car-2 {
+    animation: carAnimation2 4s infinite alternate ease-in-out;
+}
+
+@keyframes carAnimation2 {
+    0% {transform: translateX(0);}
+    25% {transform: rotateZ(-30deg);}
+    37.5% {transform: translateX(1000px);}
+    50% {transform: scaleX(-1);}
+    75% {transform: translateX(2000px);}
+    100% {transform: translateX(-2000px);}
+}
+
+#other-car2-1 {
+    position: absolute;
+    top: 750px;
+    left: 1750px;
+    animation: carAnimation2-1 5s infinite alternate ease-in-out;
+}
+
+@keyframes carAnimation2-1 {
+    0% {transform: translateX(0);}
+    10% {transform: rotateZ(10deg);}
+    25% {transform: rotateZ(-30deg);}
+    50% {transform: translateX(500px);}
+    75% {transform: scaleX(-1);}
+    90% {transform: translateX(-500px);}
+    100% {transform: translateX(0);}
+}
+
+#other-car2-2 {
+    position: absolute;
+    top: 750px;
+    left: 200px;
+    animation: carAnimation2-2 5s infinite alternate ease-in-out;
+}
+
+@keyframes carAnimation2-2 {
+    0% {transform: translateX(0);}
+    10% {transform:rotateZ(-30deg)}
+    25% {transform: rotateZ(-30deg);}
+    50% {transform: translateX(0, 50px);}
+    75% {transform: scaleX(-1);}
+    90% {transform: translateX(0px);}
+    100% {transform: translateX(50px);}
+}
+
+/* ---- Car 3 section ---- */
+
+#car-3 {
+    animation: carAnimation3 3s infinite alternate ease-in-out;
+}
+
+@keyframes carAnimation3 {
+    0% {transform: translateX(0);}
+    25% {transform: scale(-1);}
+    37.5% {transform: scale(1);}
     50% {transform: scaleX(-1);}
     75% {transform: translateX(-2000px);}
+}
+
+#other-car3-1 {
+    position: absolute;
+    top: 1200px;
+    left: 200px;
+    animation: carAnimation3-1 5s infinite alternate ease-in-out;
+}
+
+@keyframes carAnimation3-1 {
+    0% {transform: scaleX(1);}
+    10% {transform: rotateZ(10deg);}
+    25% {transform: rotateZ(-10deg);}
+    50% {transform: scaleX(-1);}
+    75% {transform:rotateZ(10deg)}
+    90% {transform: translateX(-500px);}
+    100% {transform: translateX(0);}
+}
+
+#other-car3-2 {
+    position: absolute;
+    top: 1300px;
+    left: 2200px;
+    animation: carAnimation3-2 5s infinite alternate ease-in-out;
+}
+
+@keyframes carAnimation3-2 {
+    0% {transform: scaleX(1);}
+    10% {transform: rotateZ(10deg);}
+    25% {transform: rotateZ(-10deg);}
+    50% {transform: scaleX(-1);}
+    75% {transform:rotateZ(10deg)}
+    90% {transform: translateX(-500px);}
+    100% {transform: translateX(0);}
+}
+
+/* ---- Car 4 section ---- */
+
+#car-4 {
+    animation: carAnimation4 3s infinite alternate ease-in-out;
+}
+
+@keyframes carAnimation4 {
+    0% {transform: translateX(0);}
+    25% {transform: scale(2,1);}
+    37.5% {transform: translateX(-1000px);}
+    50% {transform: scaleX(-1);}
+    75% {transform: translateX(1000px);}
+    100% {transform: rotateY(90deg);}
+}
+
+#other-car4-1 {
+    position: absolute;
+    top: 1800px;
+    left: 200px;
+    animation: carAnimation4-1 2s infinite alternate ease-in-out;
+}
+
+@keyframes carAnimation4-1 {
+    0% {transform: translateX(0);}
+    10% {transform: rotateZ(10deg);}
+    25% {transform: rotateZ(-30deg);}
+    50% {transform: translateX(500px);}
+    75% {transform: scaleX(-1);}
+    90% {transform: translateX(-500px);}
+    100% {transform: translateX(0);}
+}
+
+#other-car4-2 {
+    position: absolute;
+    top: 1800px;
+    left: 2200px;
+    animation: carAnimation4-2 2s infinite alternate ease-in-out;
+}
+
+@keyframes carAnimation4-2 {
+    0% {transform: scaleX(-1);}
+    10% {transform: scaleX(1);}
+    25% {transform: scaleX(-1);}
+    50% {transform: scaleX(1);}
+    75% {transform: scaleX(-1);}
+    90% {transform: scaleX(1);}
+    100% {transform: scaleX(-1);}
+}
+
+/* ---- Car 5 section ---- */
+
+#car-5 {
+    animation: carAnimation5 4s infinite alternate ease-in-out;
+}
+
+@keyframes carAnimation5 {
+    0% {transform: translateX(0);}
+    25% {transform: scaleX(-1);}
+    37.5% {transform: rotateZ(-30deg);}
+    50% {transform: rotateZ(-30deg);}
+    75% {transform: translateX(1000px);}
+    100% {transform: translateX(0);}
+}
+
+#other-car5-1 {
+    position: absolute;
+    top: 2200px;
+    left: 200px;
+    animation: carAnimation5-1 5s infinite alternate ease-in-out;
+}
+
+@keyframes carAnimation5-1 {
+    0% {transform: translateX(0);}
+    10% {transform: rotateZ(10deg);}
+    25% {transform: rotateZ(-30deg);}
+    50% {transform: translateX(500px);}
+    75% {transform: scaleX(-1);}
+    90% {transform: translateX(-500px);}
+    100% {transform: translateX(0);}
+}
+
+#other-car5-2 {
+    position: absolute;
+    top: 2400px;
+    left: 2350px;
+    animation: carAnimation5-2 5s infinite alternate ease-in-out;
+}
+
+@keyframes carAnimation5-2 {
+    0% {transform: scaleY(-1);}
+    10% {transform: scaleY(1);}
+    25% {transform: scaleY(-1);}
+    50% {transform: scaleY(1);}
+    75% {transform: scaleY(-1);}
+    90% {transform: scaleY(1);}
+    100% {transform: scaleY(-1);}
 }
